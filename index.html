@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paws &amp; Hearts Animal Shelter</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">Paws &amp; Hearts</a>
+  <nav aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="signup.html">Sign up</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Every pet deserves a loving home</h1>
+    <div class="clock-card">
+      <p class="muted">Right now at the shelter</p>
+      <p id="dateTime" class="clock" aria-live="off">Loading time...</p>
+    </div>
+    <div class="actions">
+      <button id="colorBtn" type="button">Change background color</button>
+      <button id="openPopup" type="button">Get adoption alerts</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Frequently asked questions</h2>
+    <div class="accordion" id="faq">
+      <div class="item">
+        <h3><button class="question" type="button" aria-expanded="false" aria-controls="a1" id="q1">How do I adopt a pet?</button></h3>
+        <div class="answer" id="a1" role="region" aria-labelledby="q1"><p>Visit the shelter, meet the animals and fill in a short adoption form. We will arrange a home visit within a week.</p></div>
+      </div>
+      <div class="item">
+        <h3><button class="question" type="button" aria-expanded="false" aria-controls="a2" id="q2">What does adoption cost?</button></h3>
+        <div class="answer" id="a2" role="region" aria-labelledby="q2"><p>The fee is 50 dollars for cats and 80 dollars for dogs. It includes vaccination, microchip and neutering.</p></div>
+      </div>
+      <div class="item">
+        <h3><button class="question" type="button" aria-expanded="false" aria-controls="a3" id="q3">Can I volunteer without experience?</button></h3>
+        <div class="answer" id="a3" role="region" aria-labelledby="q3"><p>Yes. New volunteers walk dogs, clean enclosures and help at weekend events. We train you on your first day.</p></div>
+      </div>
+      <div class="item">
+        <h3><button class="question" type="button" aria-expanded="false" aria-controls="a4" id="q4">What if the pet does not fit my home?</button></h3>
+        <div class="answer" id="a4" role="region" aria-labelledby="q4"><p>You can return the pet within 30 days. We will help you find a better match.</p></div>
+      </div>
+      <div class="item">
+        <h3><button class="question" type="button" aria-expanded="false" aria-controls="a5" id="q5">When can I visit the shelter?</button></h3>
+        <div class="answer" id="a5" role="region" aria-labelledby="q5"><p>We are open every day from 10 AM to 6 PM. Groups of more than five people should call ahead.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="popup" class="overlay hidden" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <button id="closePopup" class="close" type="button" aria-label="Close">&times;</button>
+    <h2 id="popupTitle">Meet new arrivals first</h2>
+    <p class="muted">New pets looking for a home, once a week.</p>
+    <form id="subscribeForm" novalidate>
+      <label for="subEmail">Email</label>
+      <input id="subEmail" name="email" type="email" autocomplete="email">
+      <p class="error" id="subError" role="alert"></p>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="subSuccess" class="success" role="status"></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Paws &amp; Hearts Animal Shelter</p>
+  <p class="muted">Team Nuradok: Nurzaman, Adilzhan</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
